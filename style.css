@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+:root {
+  --main-bg: #28282B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+body{
+    font-size: 15px;
+    height: 100vh;
+    width: 100%;
+    font-family: 'EB Garamond', serif;
+}
+
+main {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 900px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+  "img-section img-section"
+  "info info";
+}
+
+
+.img-page {
+  background: url(/src/kr.jpg) 90%;
+  min-height: 100%;
+  width: 100%;
+  grid-area: img-section;
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  opacity: 0.6;
+  background: var(--main-bg);
+  height: 100px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.info {
+  z-index: 1;
+  background: var(--main-bg);
+  width: 100%;
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  color: white;
+}
+
+.inpt {
+  width: 80%;
+  height: 50px;
+}
+
+form {
+  width: 80%;
+}
+
+form label {
+  color: black;
+}
+
+.submit-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.submit-cont span {
+  color: #E5AA70;
+}
+
+.submit {
+  width: 35%;
+}
+
+@media (min-width: 800px){
+  main {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    "img-section info"
+    "img-section info";
+  }
+  
+  .info{
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .info h2 {
+    font-size: 2.8rem;
+  }
+  
+  .submit {
+    width: 45%;
+  }
+  
+  .img-page {
+    background: url(/src/krBig.jpg) 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .last-col {
+    margin-bottom: 4%;
+  }
+}
