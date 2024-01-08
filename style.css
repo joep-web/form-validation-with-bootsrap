@@ -129,6 +129,10 @@ form label {
     "img-section info";
   }
   
+  form {
+    width: 87%;
+  }
+  
   .info{
     justify-content: center;
     align-items: flex-start;

@@ -24,52 +24,55 @@
     </div>
     <div class="info" id="info">
       <h2 class="h2">Become a Member Now!</h2>
-      <form action="">
+      <form action="" novalidate class="">
         <div class="row row-cols-1 row-cols-md-2 g-2">
            
       <div class="col">
         <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInput" placeholder="firstname">
+          <input type="text" class="form-control" id="floatingInput" placeholder="firstname" required>
             <label for="floatingInput">First Name</label>
         </div>
       </div>
       
        <div class="col">
         <div class="form-floating">
-          <input type="text" class="form-control" id="floatingPassword" placeholder="lastname">
+          <input type="text" class="form-control" id="floatingPassword" placeholder="lastname" required>
           <label for="floatingPassword">Last Name</label>
         </div>
       </div>
       
        <div class="col">
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingPassword" placeholder="email">
+          <input type="email" class="form-control" id="floatingPassword" placeholder="email" required>
           <label for="floatingPassword">Email</label>
         </div>
       </div>
       
        <div class="col">
         <div class="form-floating">
-          <input type="number" class="form-control" id="floatingPassword" placeholder="number">
+          <input type="number" class="form-control" id="floatingPassword" placeholder="number" required>
           <label for="floatingPassword">Number</label>
         </div>
       </div>
       
        <div class="col">
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">Password</label>
+          <input type="password" class="form-control first-pass" id="floatingPassword" placeholder="Password" pattern="\w{5,}" required>
+          <label for="floatingPassword">Password (must be 5 characters long)</label>
+          <div class="invalid-feedback">Less than 5 characters!</div>
         </div>
       </div>
       
        <div class="col last-col">
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <input type="password" class="form-control confirm-pass" id="floatingPassword" placeholder="Password" pattern="\w{5,}" required>
           <label for="floatingPassword">Confirm Password</label>
+          <div class="invalid-feedback">Password not equal</div>
+          <div class="c-pass-invalid-msg"></div>
         </div>
       </div>
         <div class="col submit-cont">
-          <button type="button" class="btn btn-secondary submit">Submit</button>
+          <input type="submit" class="btn btn-secondary submit" value="Submit">
           <p>Already a Member? <span>Log in</span></p>
         </div>
         </div>
