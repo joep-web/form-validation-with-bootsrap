@@ -26,7 +26,7 @@ body{
 main {
   height: 100%;
   display: grid;
-  grid-template-rows: 900px 1fr;
+  grid-template-rows: 900px 700px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
   "img-section img-section"
@@ -41,6 +41,11 @@ main {
   grid-area: img-section;
   display: grid;
   place-items: center;
+}
+
+.h1 a {
+  text-decoration: none;
+  color: white;
 }
 
 .title {
@@ -64,6 +69,7 @@ main {
   align-items: center;
   padding: 5%;
   color: white;
+  position: relative;
 }
 
 .inpt {
@@ -93,6 +99,26 @@ form label {
 .submit {
   width: 35%;
 }
+
+
+.dev {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width:90%;
+}
+
+.dev p {
+  margin-right: 3%;
+}
+
+
+
+
+/* media queries */
+
 
 @media (min-width: 800px){
   main {
@@ -124,5 +150,13 @@ form label {
 @media (max-width: 700px) {
   .last-col {
     margin-bottom: 4%;
+  }
+  
+  form {
+    margin-bottom: 5%;
+  }
+  
+  .info {
+    justify-content: space-evenly;
   }
 }
