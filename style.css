@@ -35,7 +35,7 @@ main {
 
 
 .img-page {
-  background: url(/src/kr.jpg) 90%;
+  background: url(src/kr.jpg) 90%;
   min-height: 100%;
   width: 100%;
   grid-area: img-section;
@@ -169,7 +169,7 @@ form label {
   }
   
   .img-page {
-    background: url(/src/krBig.jpg) 80%;
+    background: url(src/krBig.jpg) 80%;
   }
 }
 
