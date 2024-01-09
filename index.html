@@ -18,6 +18,7 @@
 <body>
   <main>
     <div class="img-page">
+      <div class="logo"><img src="/src/web-526.png" alt=""></div>
       <div class="title bg-opacity-25">
         <h1 class="h1"><a href="#info">Wanna Get Here?</a></h1>
       </div>
@@ -59,16 +60,15 @@
         <div class="form-floating">
           <input type="password" class="form-control first-pass" id="floatingPassword" placeholder="Password" pattern="\w{5,}" required>
           <label for="floatingPassword">Password (must be 5 characters long)</label>
-          <div class="invalid-feedback">Less than 5 characters!</div>
+          <div class="invalid-feedback pass-inv-msg"></div>
         </div>
       </div>
       
        <div class="col last-col">
         <div class="form-floating">
-          <input type="password" class="form-control confirm-pass" id="floatingPassword" placeholder="Password" pattern="\w{5,}" required>
+          <input type="password" class="form-control confirm-pass" id="floatingPassword" placeholder="Password" required>
           <label for="floatingPassword">Confirm Password</label>
-          <div class="invalid-feedback">Password not equal</div>
-          <div class="c-pass-invalid-msg"></div>
+          <div class="invalid-feedback c-pass-invalid-msg"></div>
         </div>
       </div>
         <div class="col submit-cont">
